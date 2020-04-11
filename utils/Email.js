@@ -4,7 +4,7 @@ var Promise = require('bluebird')
 module.exports = {
 
 	sendEmails: function(recipients, emailInfo, completion){
-		var from_email = new helper.Email('dkwon@velocity360.io')
+		var from_email = new helper.Email('nikhilmanoj.borawake@cognizant.com')
 		var subject = emailInfo.subject
 		var content = new helper.Content('text/html', emailInfo.content)
 		var sg = require('sendgrid')(process.env.SENDGRID_API_KEY)
@@ -37,7 +37,7 @@ module.exports = {
 
 	sendEmail: function(emailInfo){
 		return new Promise(function(resolve, reject){
-			var from_email = new helper.Email('dkwon@velocity360.io')
+			var from_email = new helper.Email('nikhilmanoj.borawake@cognizant.com')
 			var to_email = new helper.Email(emailInfo.recipient)
 			var subject = emailInfo.subject
 			var content = new helper.Content('text/html', emailInfo.content)
